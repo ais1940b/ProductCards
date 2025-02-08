@@ -1,0 +1,23 @@
+<div class="cart-container">
+    <div class="dialog-title">
+        <h2>Your Cart</h2>
+        <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+            <mat-icon class="close-icon" color="warn">close</mat-icon>
+          </button>
+    </div>
+    <div *ngIf="cartItems.length; else emptyCart">
+        <ul class="cart-list">
+            <li *ngFor="let item of cartItems" class="cart-item">
+                <img [src]="item.image" alt="{{ item.title }}" class="cart-item-image">
+                <div class="cart-item-details">
+                    <p>{{ item.title }}</p>
+                    <div class="cart-item-price">{{ item.price | currency }}</div>
+                </div>
+                <button (click)="removeFromCart(item)">Remove</button>
+            </li>
+        </ul>
+    </div>
+    <ng-template #emptyCart>
+        <p>Your cart is empty.</p>
+    </ng-template>
+</div>

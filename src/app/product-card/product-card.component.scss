@@ -1,0 +1,53 @@
+.card {
+    max-width: 300px;
+    margin: 4px
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card-view {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+::ng-deep {
+    .mat-card-image {
+        width: 10rem !important;
+        height: 10rem !important;
+        margin: 10px !important;
+        display: flex;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .card-bottom {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .p-r16 {
+        padding-right: 16px;
+    }
+
+    // @media screen and (max-width: 599px) {
+    //     .img-card {
+    //         position: relative;
+    //         left: 30%;
+    //     }
+    // }
+
+    // @media screen and (min-width: 600px)  and (max-width: 800px) {
+    //     .img-card {
+    //         position: relative;
+    //         left: 10%;
+    //     }
+    // }
+    
+}
